@@ -991,6 +991,93 @@ section {
     border-color: var(--primary-light);
 }
 
+/* Featured Service Card - Programming */
+.service-card-programming {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+    border: 3px solid #6366f1;
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+    position: relative;
+    overflow: visible;
+}
+
+.service-card-programming:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.5);
+    border-color: #818cf8;
+}
+
+.service-badge-code {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.5);
+    z-index: 10;
+    animation: bounceCode 2s infinite;
+}
+
+@keyframes bounceCode {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.service-card-programming .service-icon {
+    background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    animation: rotateCode 3s infinite;
+}
+
+@keyframes rotateCode {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.service-card-programming .service-icon i {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.service-card-programming .service-title {
+    color: #6366f1;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.service-card-programming .service-features {
+    background: rgba(99, 102, 241, 0.05);
+    border-right: 4px solid #6366f1;
+}
+
+.service-card-programming .feature-item i {
+    color: #6366f1;
+}
+
+.service-card-programming .service-link {
+    background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+    color: var(--white);
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+}
+
+.service-card-programming .service-link:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.6);
+}
+
 /* Featured Service Card (CV Design) */
 .service-card-featured {
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
@@ -2140,6 +2227,22 @@ section {
         font-weight: 700;
     }
     
+    /* Programming Service Card Responsive */
+    .service-badge-code {
+        font-size: 0.75rem;
+        padding: 6px 15px;
+        top: -10px;
+        right: 15px;
+    }
+    
+    .service-card-programming .service-title {
+        font-size: 1.4rem;
+    }
+    
+    .service-card-programming .service-icon i {
+        font-size: 1.8rem;
+    }
+    
     /* CV Service Card Responsive */
     .service-badge {
         font-size: 0.75rem;
@@ -2159,6 +2262,11 @@ section {
     
     .feature-item i {
         font-size: 1rem;
+    }
+    
+    .feature-item span {
+        font-size: 0.88rem;
+        line-height: 1.5;
     }
     
     .service-card p,
