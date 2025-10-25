@@ -10,3 +10,4 @@ Sitemap: https://www.drzainab.com/sitemap.xml
 # Disallow: /private/
 # Disallow: /admin/
 
+

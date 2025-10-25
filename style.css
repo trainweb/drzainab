@@ -991,6 +991,90 @@ section {
     border-color: var(--primary-light);
 }
 
+/* Featured Service Card (CV Design) */
+.service-card-featured {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+    border: 2px solid var(--gold);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+    position: relative;
+}
+
+.service-card-featured:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 50px rgba(212, 175, 55, 0.4);
+    border-color: var(--gold);
+}
+
+.service-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--gold) 0%, #f4e4b4 100%);
+    color: var(--primary-dark);
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgba(212, 175, 55, 0.4);
+    z-index: 10;
+}
+
+.service-features {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    border-right: 4px solid var(--gold);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.feature-item:last-child {
+    margin-bottom: 0;
+}
+
+.feature-item i {
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.feature-item span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.service-card-featured .service-icon {
+    background: linear-gradient(135deg, var(--gold) 0%, #f4e4b4 100%);
+}
+
+.service-card-featured .service-icon i {
+    color: var(--primary-dark);
+}
+
+.service-card-featured .service-title {
+    color: var(--primary-purple);
+    font-weight: 800;
+}
+
+.service-card-featured .service-link {
+    background: linear-gradient(135deg, var(--gold) 0%, #f4e4b4 100%);
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.service-card-featured .service-link:hover {
+    background: linear-gradient(135deg, #f4e4b4 0%, var(--gold) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
 .service-icon {
     width: 80px;
     height: 80px;
@@ -2054,6 +2138,27 @@ section {
         font-size: 1.3rem;
         color: var(--primary-purple);
         font-weight: 700;
+    }
+    
+    /* CV Service Card Responsive */
+    .service-badge {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+        top: 15px;
+        right: 15px;
+    }
+    
+    .service-features {
+        padding: 1.2rem;
+    }
+    
+    .feature-item {
+        font-size: 0.9rem;
+        gap: 10px;
+    }
+    
+    .feature-item i {
+        font-size: 1rem;
     }
     
     .service-card p,
