@@ -426,6 +426,47 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
     color: var(--text-dark);
+    line-height: 1.4;
+}
+
+/* Ensure all headings are visible and colored properly */
+.section-title {
+    color: var(--primary-purple) !important;
+    font-weight: 800 !important;
+}
+
+.service-card h3,
+.specialization-card h3,
+.portfolio-card h4,
+.pricing-card h3,
+.testimonial-card h5 {
+    color: var(--primary-purple) !important;
+    font-weight: 700 !important;
+}
+
+.hero-title {
+    color: var(--white) !important;
+    font-weight: 900 !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    color: var(--white) !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure all text content is visible */
+p, li, span, a {
+    line-height: 1.7;
+}
+
+.service-card p,
+.specialization-card p,
+.portfolio-card p,
+.about-text p,
+.testimonial-card p {
+    color: var(--text-dark) !important;
+    line-height: 1.7 !important;
 }
 
 a {
@@ -1631,7 +1672,7 @@ section {
 .footer-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--white) !important;
     margin-bottom: 1.5rem;
 }
 
@@ -1640,9 +1681,10 @@ section {
 }
 
 .footer-text {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9) !important;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    font-size: 0.95rem;
 }
 
 .footer-social {
@@ -1678,10 +1720,11 @@ section {
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9) !important;
     transition: var(--transition);
     display: flex;
     align-items: center;
+    font-size: 0.95rem;
 }
 
 .footer-links a::before {
@@ -1704,7 +1747,8 @@ section {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.95rem;
 }
 
 .footer-contact i {
@@ -1892,10 +1936,25 @@ section {
 @media (max-width: 991px) {
     .hero-title {
         font-size: 2.5rem;
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 900;
+    }
+    
+    .hero-subtitle {
+        color: var(--white);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     }
     
     .section-title {
         font-size: 2.2rem;
+        color: var(--primary-purple);
+        font-weight: 800;
+    }
+    
+    .section-description {
+        color: var(--dark-gray);
+        line-height: 1.7;
     }
     
     .hero-buttons {
@@ -1904,6 +1963,8 @@ section {
     
     .hero-buttons .btn {
         width: 100%;
+        font-size: 1.1rem;
+        padding: 14px 35px;
     }
     
     .navbar-collapse {
@@ -1914,9 +1975,30 @@ section {
         box-shadow: var(--shadow-md);
     }
     
+    .nav-link {
+        color: var(--text-dark);
+        font-weight: 600;
+    }
+    
     .contact-btn {
         margin: 1rem 0 0 0 !important;
         width: 100%;
+    }
+    
+    /* تحسين العناوين في الكروت */
+    .service-card h3,
+    .specialization-card h3,
+    .portfolio-card h4,
+    .pricing-card h3 {
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .service-card p,
+    .specialization-card p,
+    .portfolio-card p {
+        color: var(--text-dark);
+        line-height: 1.6;
     }
 }
 
@@ -1927,18 +2009,35 @@ section {
     
     .hero-title {
         font-size: 2rem;
+        line-height: 1.3;
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     }
     
     .hero-subtitle {
         font-size: 1.1rem;
+        color: var(--white);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     }
     
     .section-title {
         font-size: 1.8rem;
+        line-height: 1.4;
+        color: var(--primary-purple);
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        color: var(--dark-gray);
+        line-height: 1.6;
     }
     
     .stat-number {
         font-size: 2rem;
+        color: var(--primary-purple);
+        font-weight: 900;
     }
     
     .service-card,
@@ -1948,12 +2047,46 @@ section {
         margin-bottom: 1.5rem;
     }
     
+    .service-card h3,
+    .specialization-card h3,
+    .portfolio-card h4,
+    .pricing-card h3 {
+        font-size: 1.3rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .service-card p,
+    .specialization-card p,
+    .portfolio-card p {
+        font-size: 0.95rem;
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
+    
     .pricing-card.featured {
         transform: scale(1);
     }
     
+    .pricing-card .price {
+        font-size: 2rem;
+        color: var(--primary-purple);
+        font-weight: 900;
+    }
+    
     .contact-form-wrapper {
         padding: 2rem 1.5rem;
+    }
+    
+    .whatsapp-contact-card h2 {
+        font-size: 1.5rem;
+        color: var(--primary-purple);
+        font-weight: 800;
+    }
+    
+    .whatsapp-number {
+        font-size: 1.5rem;
+        padding: 15px 30px;
     }
     
     .whatsapp-float {
@@ -1978,20 +2111,179 @@ section {
         font-size: 2rem;
         gap: 1rem;
     }
+    
+    /* تحسين شريط الإعلانات على الجوال */
+    .announcement-text {
+        font-size: 14px;
+    }
+    
+    /* تحسين Navbar على الجوال */
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        color: var(--text-dark);
+        font-weight: 600;
+    }
+    
+    /* تحسين الأزرار */
+    .btn {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+    
+    /* تحسين Footer */
+    .footer-title {
+        font-size: 1.2rem;
+        color: var(--white);
+        font-weight: 700;
+    }
+    
+    .footer-text,
+    .footer-links li a,
+    .footer-contact li {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    /* تحسين Testimonials */
+    .testimonial-card h5 {
+        font-size: 1.1rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .testimonial-card .position {
+        font-size: 0.9rem;
+        color: var(--gold);
+    }
+    
+    .testimonial-card p {
+        font-size: 0.95rem;
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
 }
 
 @media (max-width: 575px) {
     .hero-title {
         font-size: 1.7rem;
+        line-height: 1.3;
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 900;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        color: var(--white);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        line-height: 1.6;
     }
     
     .section-title {
         font-size: 1.5rem;
+        line-height: 1.4;
+        color: var(--primary-purple);
+        font-weight: 800;
+        margin-bottom: 1rem;
+    }
+    
+    .section-description {
+        font-size: 0.95rem;
+        color: var(--dark-gray);
+        line-height: 1.6;
+    }
+    
+    .service-card h3,
+    .specialization-card h3 {
+        font-size: 1.2rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+        margin-bottom: 0.8rem;
+    }
+    
+    .service-card p,
+    .specialization-card p {
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
+    
+    .portfolio-card h4 {
+        font-size: 1.1rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .portfolio-card p {
+        font-size: 0.85rem;
+        color: var(--text-dark);
+    }
+    
+    .pricing-card h3 {
+        font-size: 1.2rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .pricing-card .price {
+        font-size: 1.8rem;
+        color: var(--primary-purple);
+        font-weight: 900;
+    }
+    
+    .pricing-card .price-note {
+        font-size: 0.85rem;
+        color: var(--dark-gray);
     }
     
     .about-floating-card {
         position: static;
         margin-top: 1rem;
+    }
+    
+    .whatsapp-contact-card h2 {
+        font-size: 1.3rem;
+        color: var(--primary-purple);
+        font-weight: 800;
+    }
+    
+    .whatsapp-contact-card .lead {
+        font-size: 0.95rem;
+        color: var(--dark-gray);
+    }
+    
+    .whatsapp-number {
+        font-size: 1.3rem;
+        padding: 12px 25px;
+    }
+    
+    .btn-whatsapp {
+        font-size: 0.95rem;
+        padding: 14px 30px;
+    }
+    
+    .location-badge {
+        font-size: 0.9rem;
+        padding: 12px 25px;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+        color: var(--white);
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-text,
+    .footer-links li a,
+    .footer-contact li {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.9);
     }
     
     .footer-bottom-links {
@@ -2001,6 +2293,181 @@ section {
     
     .footer-bottom-links span {
         display: none;
+    }
+    
+    /* تحسين Popup على الشاشات الصغيرة */
+    .popup-title {
+        font-size: 1.2rem;
+        color: var(--white);
+        font-weight: 700;
+    }
+    
+    .popup-text {
+        font-size: 0.9rem;
+        color: var(--white);
+        line-height: 1.6;
+    }
+    
+    /* تحسين شريط الإعلانات */
+    .announcement-text {
+        font-size: 13px;
+    }
+    
+    /* تحسين Navbar */
+    .navbar-brand {
+        font-size: 1.2rem;
+        color: var(--primary-purple);
+        font-weight: 900;
+    }
+    
+    .nav-link {
+        font-size: 0.95rem;
+        color: var(--text-dark);
+        font-weight: 600;
+    }
+    
+    /* تحسين الأزرار */
+    .btn {
+        font-size: 0.95rem;
+        padding: 12px 25px;
+    }
+    
+    /* تحسين Stats */
+    .stat-number {
+        font-size: 1.8rem;
+        color: var(--primary-purple);
+        font-weight: 900;
+    }
+    
+    .stat-text {
+        font-size: 0.9rem;
+        color: var(--text-dark);
+    }
+}
+
+/* Mobile Landscape Optimization */
+@media (max-width: 896px) and (orientation: landscape) {
+    body {
+        padding-top: 70px;
+    }
+    
+    .hero-section {
+        min-height: 80vh;
+        padding: 50px 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 900;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        color: var(--white);
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .section-padding {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        color: var(--primary-purple);
+        font-weight: 800;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .announcement-banner {
+        padding: 8px 0;
+    }
+    
+    .announcement-text {
+        font-size: 13px;
+    }
+}
+
+/* Tablet Portrait Optimization */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-title {
+        font-size: 2.2rem;
+        color: var(--primary-purple);
+        font-weight: 800;
+    }
+    
+    .hero-title {
+        font-size: 2.8rem;
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 900;
+    }
+    
+    .service-card h3,
+    .specialization-card h3 {
+        font-size: 1.4rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .portfolio-card h4 {
+        font-size: 1.3rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .pricing-card h3 {
+        font-size: 1.5rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .pricing-card .price {
+        font-size: 2.5rem;
+        color: var(--primary-purple);
+        font-weight: 900;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+        color: var(--white);
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        font-weight: 900;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+        color: var(--primary-purple);
+        font-weight: 800;
+    }
+    
+    .service-card h3,
+    .specialization-card h3 {
+        font-size: 1.1rem;
+        color: var(--primary-purple);
+        font-weight: 700;
+    }
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+    
+    .whatsapp-number {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+    
+    .announcement-text {
+        font-size: 12px;
     }
 }
 
