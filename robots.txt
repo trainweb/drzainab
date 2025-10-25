@@ -1,0 +1,11 @@
+# robots.txt for Dr. Zainab Website
+
+User-agent: *
+Allow: /
+
+# Sitemap location (create sitemap.xml if needed)
+Sitemap: https://www.drzainab.com/sitemap.xml
+
+# Disallow specific paths (add as needed)
+# Disallow: /private/
+# Disallow: /admin/
